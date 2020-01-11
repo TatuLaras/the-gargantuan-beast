@@ -1,18 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 [RequireComponent(typeof(Collider))]
 public class InteractableObject : MonoBehaviour
 {
     //[SerializeField] float locationStrenght = 100;
     //[SerializeField] float rotationStrenght = 400;
+    BodyCollision bodyCollision;
+    [SerializeField] float paragliderSmoothspeed = 20f;
 
     [HideInInspector] public GameObject handGrabbing = null;
     [HideInInspector] public Rigidbody rb;
 
-    public ObjectType objectType;
     public GameObject rootObject;
+
+    public ObjectType objectType = ObjectType.undefined;
+    public bool doNotInteract = false;
+    public SpreadingFire fire = null;
+    public GameObject handlebone;
 
     void Start()
     {
@@ -26,17 +33,47 @@ public class InteractableObject : MonoBehaviour
         
         rb = rootObject.GetComponent<Rigidbody>();
 
+        if (doNotInteract)
+        {
+            rb.useGravity = false;
+            rb.isKinematic = true;
+        }
+
+        bodyCollision = FindObjectOfType<BodyCollision>();
     }
 
     void Update()
     {
-        if(handGrabbing != null)
+        if(handGrabbing != null && !doNotInteract)
         {
-            rootObject.transform.position = handGrabbing.transform.position;
-            rootObject.transform.rotation = handGrabbing.transform.rotation;
+            if(objectType == ObjectType.paraglider)
+            {
+                if(handlebone != null)
+                {
+                    rootObject.transform.position = handGrabbing.transform.position;
+                    handlebone.transform.rotation = handGrabbing.GetComponent<DetectInteractions>().paragliderPoint.transform.rotation;
+
+                    Quaternion target = bodyCollision.transform.rotation;
+                    //Quaternion smoothed = Quaternion.Lerp(rootObject.transform.rotation, target, 0.5f);
+
+                    rootObject.transform.rotation = Quaternion.RotateTowards(rootObject.transform.rotation, target, Time.deltaTime * paragliderSmoothspeed);
+                }
+                else
+                {
+                    Debug.LogError("Handlebone not assigned");
+#if UNITY_EDITOR
+                    UnityEditor.EditorApplication.isPaused = true;
+#endif
+                }
+
+            } else
+            {
+                rootObject.transform.rotation = handGrabbing.transform.rotation;
+                rootObject.transform.position = handGrabbing.transform.position;
+            }
 
             // Check if left hand, then flip the object
-            if(handGrabbing.GetComponent<DetectInteractions>().handController.pose.inputSource == Singleton.instance.leftHand)
+            if(handGrabbing.GetComponentInParent<SteamVR_Behaviour_Pose>().inputSource == Singleton.instance.leftHand && objectType != ObjectType.paraglider)
                 rootObject.transform.Rotate(180, 0, 0, Space.Self);
         }
     }

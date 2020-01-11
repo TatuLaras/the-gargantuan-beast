@@ -5,49 +5,14 @@ using UnityEngine.Events;
 
 public class Weakspot : MonoBehaviour
 {
-    [SerializeField] GameObject bomb;
     [SerializeField] GameObject rootObject;
-    [SerializeField] ParticleSystem explosionParticles;
 
-    float fuseLenghtSeconds = 10;
     float bombAttachBoundX = 0.585f;
     float bombAttachBoundZ = 0.273f;
 
     [HideInInspector] public bool bombPlanted;
     [HideInInspector] public delegate void Damage();
-
-    public Damage damage;
-
-    void Start()
-    {
-        if (bomb == null)
-        {
-            Debug.LogError("Assign a bomb object for the weakspot", this.gameObject);
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPaused = true;
-#endif
-        }
-
-        if (explosionParticles == null)
-        {
-            Debug.LogError("Assign a particle system for the weakspot", this.gameObject);
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPaused = true;
-#endif
-        }
-
-        if (rootObject == null)
-        {
-            Debug.LogError("Assign a root object for the weakspot", this.gameObject);
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPaused = true;
-#endif
-        }
-
-
-        bomb.SetActive(false);
-        explosionParticles.gameObject.SetActive(false);
-    }
+    [HideInInspector] public Damage damage;
 
     public bool PlantBomb(InteractableObject item, Vector3 placeToPlant)
     {
@@ -56,28 +21,29 @@ public class Weakspot : MonoBehaviour
             return false;
         }
 
-        Destroy(item.rootObject);
-        bomb.SetActive(true);
-
-        Vector3 bombPos = new Vector3(placeToPlant.x, bomb.transform.position.y, placeToPlant.z);
+        Vector3 bombPos = new Vector3(placeToPlant.x, this.transform.position.y, placeToPlant.z);
 
         bombPos.x = Mathf.Clamp(bombPos.x, this.transform.position.x - bombAttachBoundX, this.transform.position.x + bombAttachBoundX);
         bombPos.z = Mathf.Clamp(bombPos.z, this.transform.position.z - bombAttachBoundZ, this.transform.position.z + bombAttachBoundZ);
 
-        bomb.transform.position = bombPos;
-        bombPlanted = true;
+        item.rootObject.transform.parent = this.transform;
 
-        Invoke("Explode", fuseLenghtSeconds);
+        item.rootObject.transform.position = bombPos;
+        item.rootObject.transform.rotation = Quaternion.identity;
+        item.GetComponent<Bomb>().bombStrap.SetActive(true);
+        item.doNotInteract = true;
+
+
+        bombPlanted = true;
 
         return true;
     }
 
-    void Explode()
+    public void Explode()
     {
-        bomb.SetActive(false);
-        explosionParticles.gameObject.SetActive(true);
-        explosionParticles.Play();
         rootObject.SetActive(false);
-        damage();
+
+        if(damage != null)
+            damage();
     }
 }

@@ -24,6 +24,9 @@ ModelImporter:
   - first:
       74: 8349542763059015795
     second: Armature|Walk
+  - first:
+      74: 3800721468275536773
+    second: Armature|Walk (1)
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -67,7 +70,7 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -161,7 +164,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 2
-    rootMotionBoneName: 
+    rootMotionBoneName: torso_lower
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

@@ -6,5 +6,6 @@ public enum ObjectType
 {
     undefined,
     bomb,
-    weapon
+    weapon,
+    paraglider
 }

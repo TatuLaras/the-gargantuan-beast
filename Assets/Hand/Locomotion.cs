@@ -3,23 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Legs))]
 public class Locomotion : MonoBehaviour
 {
-    [SerializeField] GameObject player;
-    [SerializeField] float speed = 5f;
-    [SerializeField] float walkCircleRadius = 0.3f;
-    [SerializeField] SteamVR_Action_Vector2 joystick;
 
-    BodyController bodyController;
-    Vector3 playerTargetPos;
+    [SerializeField] float speed = 800f;
+    [SerializeField] SteamVR_Action_Vector2 joystick;
+    [SerializeField] float joystickDeadzone = 0.2f;
+    [SerializeField] GameObject preferredLocomotionHand;
+    Legs legs;
+    Climbing climbingManager;
+    FrictionAndVelocity frictionAndVelocity;
+    Rigidbody rb;
+
+    [HideInInspector] public bool locomoting;
 
     void Start()
     {
-        playerTargetPos = player.transform.position;
-        if (player != null)
-            player = this.transform.parent.gameObject;
-
-        bodyController = player.GetComponent<BodyController>();
+        legs = GetComponent<Legs>();
+        rb = GetComponent<Rigidbody>();
+        climbingManager = GetComponent<Climbing>();
+        frictionAndVelocity = GetComponent<FrictionAndVelocity>();
     }
 
     void Update()
@@ -27,25 +32,17 @@ public class Locomotion : MonoBehaviour
         float x = joystick.axis.x;
         float y = joystick.axis.y;
 
-        if (bodyController.climbing == false && bodyController.grounded == true)
-        { 
-            Rigidbody playerRb = player.GetComponent<Rigidbody>();
-            playerTargetPos += (transform.right * x + transform.forward * y) * Time.deltaTime * 5;
-
-            playerTargetPos = new Vector3(  Mathf.Clamp(playerTargetPos.x, player.transform.position.x - walkCircleRadius,
-                                            player.transform.position.x + walkCircleRadius),
-                                            playerTargetPos.y,
-                                            Mathf.Clamp(playerTargetPos.z, player.transform.position.z - walkCircleRadius,
-                                            player.transform.position.z + walkCircleRadius) 
-                                        );
-
-            Vector3 playerVelocity = (playerTargetPos - player.transform.position) * speed;
-            // Exclude y axis
-            playerVelocity = new Vector3(playerVelocity.x, playerRb.velocity.y, playerVelocity.z);
-            playerRb.velocity = playerVelocity;
-        } else
+        if (Mathf.Abs(x) >= joystickDeadzone || Mathf.Abs(y) >= joystickDeadzone)
         {
-            playerTargetPos = player.transform.position;
+            Vector3 velocity = (preferredLocomotionHand.transform.right * x + preferredLocomotionHand.transform.forward * y) * Time.fixedDeltaTime * speed;
+
+            frictionAndVelocity.desiredLocomotionVelocity = new Vector2(velocity.x, velocity.z);
+
+            locomoting = true;
+        }
+        else
+        {
+            locomoting = false;
         }
     }
 }

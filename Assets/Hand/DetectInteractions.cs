@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class DetectInteractions : MonoBehaviour
 {
@@ -9,18 +10,18 @@ public class DetectInteractions : MonoBehaviour
     [HideInInspector] public InventorySlot slot = null;
     [HideInInspector] public GameObject climbable = null;
     [HideInInspector] public Weakspot weakspot = null;
+    public GameObject paragliderPoint;
 
-    public HandController handController;
+    HandController handController;
+
+    Haptics haptics;
+    SteamVR_Behaviour_Pose pose;
 
     void Start()
     {
-        if (handController == null)
-        {
-            Debug.LogError("Assign a hand controller", this.gameObject);
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPaused = true;
-#endif
-        }
+        handController = GetComponentInParent<HandController>();
+        haptics = handController.GetComponent<Haptics>();
+        pose = handController.GetComponent<SteamVR_Behaviour_Pose>();
     }
 
     void OnTriggerExit(Collider other)
@@ -54,7 +55,7 @@ public class DetectInteractions : MonoBehaviour
         {
             if(climbable == null)
             {
-                handController.haptics.Pulse(PulseTypes.basicTouch, handController.pose.inputSource);
+                haptics.Pulse(PulseTypes.basicTouch, pose.inputSource);
             }
 
             climbable = other.gameObject;
@@ -68,7 +69,7 @@ public class DetectInteractions : MonoBehaviour
 
             if (grabbable == null && objectGrabbed.handGrabbing == null)
             {
-                handController.haptics.Pulse(PulseTypes.basicTouch, handController.pose.inputSource);
+                haptics.Pulse(PulseTypes.basicTouch, pose.inputSource);
             }
 
             if (objectGrabbed.handGrabbing == null)
@@ -81,7 +82,7 @@ public class DetectInteractions : MonoBehaviour
         {
             if(slot == null)
             {
-                handController.haptics.Pulse(PulseTypes.basicTouch, handController.pose.inputSource);
+                haptics.Pulse(PulseTypes.basicTouch, pose.inputSource);
             }
 
             slot = other.GetComponent<InventorySlot>();
@@ -91,7 +92,7 @@ public class DetectInteractions : MonoBehaviour
         {
             if (weakspot == null)
             {
-                handController.haptics.Pulse(PulseTypes.basicTouch, handController.pose.inputSource);
+                haptics.Pulse(PulseTypes.basicTouch, pose.inputSource);
             }
 
             weakspot = other.GetComponent<Weakspot>();
