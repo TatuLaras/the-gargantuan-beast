@@ -8,8 +8,8 @@ public class InteractableObject : MonoBehaviour
 {
     //[SerializeField] float locationStrenght = 100;
     //[SerializeField] float rotationStrenght = 400;
-    BodyCollision bodyCollision;
-    [SerializeField] float paragliderSmoothspeed = 20f;
+    BodyController player;
+    [SerializeField] float paragliderSmoothspeed = 2f;
 
     [HideInInspector] public GameObject handGrabbing = null;
     [HideInInspector] public Rigidbody rb;
@@ -39,7 +39,7 @@ public class InteractableObject : MonoBehaviour
             rb.isKinematic = true;
         }
 
-        bodyCollision = FindObjectOfType<BodyCollision>();
+        player = FindObjectOfType<BodyController>();
     }
 
     void Update()
@@ -53,7 +53,8 @@ public class InteractableObject : MonoBehaviour
                     rootObject.transform.position = handGrabbing.transform.position;
                     handlebone.transform.rotation = handGrabbing.GetComponent<DetectInteractions>().paragliderPoint.transform.rotation;
 
-                    Quaternion target = bodyCollision.transform.rotation;
+                    Quaternion target = Quaternion.LookRotation(player.GetComponent<Rigidbody>().velocity);
+                    target = Quaternion.Euler(new Vector3(0, target.eulerAngles.y, 0));
                     //Quaternion smoothed = Quaternion.Lerp(rootObject.transform.rotation, target, 0.5f);
 
                     rootObject.transform.rotation = Quaternion.RotateTowards(rootObject.transform.rotation, target, Time.deltaTime * paragliderSmoothspeed);

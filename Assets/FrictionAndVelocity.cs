@@ -43,50 +43,29 @@ public class FrictionAndVelocity : MonoBehaviour
         if(climbingManager.climbing == false && legs.grounded == true)
         {
             Vector2 horVelocity = Vector2.zero;
-            float vertVelocity = 0;
+            float vertVelocity = rb.velocity.y;
 
-            if (Mathf.Abs(Vector3.Magnitude(refPointVelocities.leg_refVelocity)) >= 0.1f)
+            
+            if (locomotion.locomoting)
             {
-                horVelocity = new Vector2(refPointVelocities.leg_refVelocity.x, refPointVelocities.leg_refVelocity.z);
-                vertVelocity = refPointVelocities.leg_refVelocity.y;
-
-                if (locomotion.locomoting)
-                {
-                    horVelocity += desiredLocomotionVelocity;
-                }
-
-            } else
+                horVelocity += desiredLocomotionVelocity;
+            }
+            else
             {
-                if (locomotion.locomoting)
-                {
-                    horVelocity += desiredLocomotionVelocity;
-                }
-                else
-                {
-                    horVelocity = new Vector2(rb.velocity.x, rb.velocity.z) * friction;
-                }
+                horVelocity = new Vector2(rb.velocity.x, rb.velocity.z) * friction;
             }
 
             if (legs.grounded)
-            {
-                vertVelocity += desiredLegVelocityY;
-            } else
-            {
-                vertVelocity = rb.velocity.y;
-            }
-
-            if (Mathf.Abs(Vector3.Magnitude(refPointVelocities.leg_refVelocity)) >= 0.1f)
-            {
-                horVelocity += new Vector2(refPointVelocities.leg_refVelocity.x, refPointVelocities.leg_refVelocity.z);
-                vertVelocity += refPointVelocities.leg_refVelocity.y;
-            }
-
+                vertVelocity = desiredLegVelocityY;
+            
             Vector3 velocity = new Vector3(horVelocity.x, vertVelocity, horVelocity.y);
-            //velocity += refPointVelocities.leg_refVelocity;
             rb.velocity = velocity;
+
+
         }
         else if(climbingManager.climbing == true)
         {
+
             rb.velocity = desiredClimbVelocity;
         }
 

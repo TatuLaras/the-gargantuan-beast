@@ -31,6 +31,7 @@ public class Weakspot : MonoBehaviour
         item.rootObject.transform.position = bombPos;
         item.rootObject.transform.rotation = Quaternion.identity;
         item.GetComponent<Bomb>().bombStrap.SetActive(true);
+        item.GetComponent<Bomb>().attached = true;
         item.doNotInteract = true;
 
 

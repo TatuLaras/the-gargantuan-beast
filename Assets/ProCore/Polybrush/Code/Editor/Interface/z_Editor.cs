@@ -518,7 +518,7 @@ namespace Polybrush
 			if(tool != z_BrushTool.None)
 			{
 				Tools.current = Tool.None;
-				mode.OnEnable();
+				//mode.OnEnable();
 			}
 
 			Repaint();

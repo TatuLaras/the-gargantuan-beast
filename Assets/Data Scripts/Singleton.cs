@@ -10,6 +10,11 @@ public class Singleton : MonoBehaviour
     public SteamVR_Input_Sources leftHand;
     public SteamVR_Input_Sources rightHand;
 
+    public AudioClip windClip;
+    public AudioClip bombClip;
+
+    [HideInInspector] public AudioManager audio;
+
     void Awake()
     {
         if(instance != null && instance != this)
@@ -19,6 +24,13 @@ public class Singleton : MonoBehaviour
         {
             instance = this;
         }
+
+    }
+
+    private void Start()
+    {
+        audio = GetComponent<AudioManager>();
+        StartCoroutine(audio.PlayClip(windClip, AudioType.ambient));
 
     }
 

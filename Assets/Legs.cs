@@ -7,6 +7,7 @@ public class Legs : MonoBehaviour
 {
     [SerializeField] float standingUpSpeed = 5f;
     [SerializeField] float groundSteepnessTreshold = 60;
+    [SerializeField] float extraParenting = 0.5f;
     Transform head;
     Rigidbody rb;
     Climbing climbingManager;
@@ -15,6 +16,8 @@ public class Legs : MonoBehaviour
 
     [HideInInspector] public GameObject legRef;
     [HideInInspector] public bool grounded;
+
+    float distanceGizmo;
 
     void Start()
     {
@@ -25,18 +28,18 @@ public class Legs : MonoBehaviour
         frictionAndVelocity = GetComponent<FrictionAndVelocity>();
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         // Bit shift the index of the layer (0) to get a bit mask
         int layerMask = 1 << 0;
 
         RaycastHit hit;
 
-        float feetLenght = 10f;
+        float feetLenght = 0;
         Vector3 hitNormal = Vector3.zero;
 
         float distanceFromFloor = Vector3.Dot(head.localPosition, Vector3.up);
-
+        distanceGizmo = distanceFromFloor;
 
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(head.position, transform.TransformDirection(Vector3.down), out hit, distanceFromFloor + 0.1f, layerMask))
@@ -50,6 +53,13 @@ public class Legs : MonoBehaviour
             grounded = false;
         }
 
+        bool nearGround = false;
+        RaycastHit hit2;
+        if (Physics.Raycast(head.position, transform.TransformDirection(Vector3.down), out hit2, distanceFromFloor + 0.1f + extraParenting, layerMask))
+        {
+            nearGround = true;
+        }
+
         if (Vector3.Angle(Vector3.up, hit.normal) > groundSteepnessTreshold)
         {
             grounded = false;
@@ -59,33 +69,51 @@ public class Legs : MonoBehaviour
         {
             if (feetLenght <= distanceFromFloor)
             {
-                //float fallingFlex = (rb.velocity.y < 0) ? rb.velocity.y : 0;
+                float fallingFlex = (rb.velocity.y < 0) ? rb.velocity.y : 0;
                 //rb.velocity = new Vector3(rb.velocity.x, ((distanceFromFloor - feetLenght) * standingUpSpeed) + fallingFlex, rb.velocity.z);
 
-                frictionAndVelocity.desiredLegVelocityY = (((distanceFromFloor - feetLenght) * standingUpSpeed));
+                frictionAndVelocity.desiredLegVelocityY = ((distanceFromFloor - feetLenght) * standingUpSpeed) + fallingFlex;
 
+                
+            }
+
+            if (nearGround == true)
+            {
                 if (legRef == null)
                 {
                     legRef = new GameObject("legref");
                     legRef.transform.position = hit.point;
                     legRef.transform.parent = hit.collider.transform;
+                    this.transform.parent = legRef.transform;
                 }
                 else if (hit.collider.transform != legRef.transform.parent)
                 {
+                    this.transform.parent = null;
                     Destroy(legRef);
                     legRef = new GameObject("legref");
                     legRef.transform.position = hit.point;
                     legRef.transform.parent = hit.collider.transform;
+                    this.transform.parent = legRef.transform;
                 }
             }
         }
         else
         {
+            this.transform.parent = null;
             Destroy(legRef);
             legRef = null;
             if(refs != null)
                 refs.leg_posLastFrame = Vector3.zero;
             frictionAndVelocity.desiredLegVelocityY = 0;
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if(distanceGizmo != 0 && head != null)
+        {
+            Gizmos.color = Color.white;
+            Gizmos.DrawLine(head.transform.position, head.transform.position + (Vector3.down * (distanceGizmo + extraParenting)));
         }
     }
 }

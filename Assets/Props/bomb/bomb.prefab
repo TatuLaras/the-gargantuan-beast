@@ -25,11 +25,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80804a526abb1746a18d7ed67660961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuseLenghtSeconds: 10
+  fuseLenghtSeconds: 16
   explosionRadius: 5
-  bombStrap: {fileID: 7257193026756055002}
+  nearAudioRadius: 6
+  farAudioRadius: 30
   explosionParticlePrefab: {fileID: 8829914062689458282, guid: 115892665afcd18469e0885ebfd272a1,
     type: 3}
+  bombStrap: {fileID: 7257193026756055002}
+  attached: 0
 --- !u!114 &5256776455436919006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,12 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1134245a449e9a04c8a4083f34d277ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paragliderSmoothspeed: 20
   handGrabbing: {fileID: 0}
   rb: {fileID: 0}
   rootObject: {fileID: 5256776455354603444}
   objectType: 1
   doNotInteract: 0
   fire: {fileID: 5256776456143905011}
+  handlebone: {fileID: 0}
 --- !u!1 &5256776455354603444
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,11 +281,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -5753458479954656293, guid: 413ca5e5341802d4b9c3d704a0b6f804,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 075bc64a647b0b5488f4f99b8e9f4ebd, type: 2}
     - target: {fileID: 2089795424786357521, guid: 413ca5e5341802d4b9c3d704a0b6f804,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -289,6 +289,11 @@ PrefabInstance:
     - target: {fileID: 2089795424786357521, guid: 413ca5e5341802d4b9c3d704a0b6f804,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 075bc64a647b0b5488f4f99b8e9f4ebd, type: 2}
+    - target: {fileID: -5753458479954656293, guid: 413ca5e5341802d4b9c3d704a0b6f804,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 075bc64a647b0b5488f4f99b8e9f4ebd, type: 2}
     m_RemovedComponents: []

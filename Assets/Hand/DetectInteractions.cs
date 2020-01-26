@@ -48,7 +48,7 @@ public class DetectInteractions : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
 
         if (other.CompareTag("Climbable"))
