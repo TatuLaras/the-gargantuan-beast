@@ -84,22 +84,18 @@ public class Legs : MonoBehaviour
                     legRef = new GameObject("legref");
                     legRef.transform.position = hit.point;
                     legRef.transform.parent = hit.collider.transform;
-                    this.transform.parent = legRef.transform;
                 }
                 else if (hit.collider.transform != legRef.transform.parent)
                 {
-                    this.transform.parent = null;
                     Destroy(legRef);
                     legRef = new GameObject("legref");
                     legRef.transform.position = hit.point;
                     legRef.transform.parent = hit.collider.transform;
-                    this.transform.parent = legRef.transform;
                 }
             }
         }
         else
         {
-            this.transform.parent = null;
             Destroy(legRef);
             legRef = null;
             if(refs != null)

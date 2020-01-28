@@ -65,6 +65,7 @@
     <Compile Include="Assets\AnimateFingers.cs" />
     <Compile Include="Assets\AudioManager.cs" />
     <Compile Include="Assets\AutoDestroyParticle.cs" />
+    <Compile Include="Assets\BaseLine.cs" />
     <Compile Include="Assets\BodyCollision.cs" />
     <Compile Include="Assets\BodyController.cs" />
     <Compile Include="Assets\Damage.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\Legs.cs" />
     <Compile Include="Assets\MusicTrigger.cs" />
     <Compile Include="Assets\ObjectInteraction.cs" />
+    <Compile Include="Assets\Parenter.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathFollower.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
@@ -125,6 +127,7 @@
     <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Utility\z_MeshUtility.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Utility\z_Util.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Utility\z_Vector.cs" />
+    <Compile Include="Assets\Ragdoller.cs" />
     <Compile Include="Assets\RefPointVelocities.cs" />
     <Compile Include="Assets\SFXManager.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
@@ -132,6 +135,7 @@
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
     <Compile Include="Assets\SimpleInstantiate.cs" />
     <Compile Include="Assets\Sounds\music\FadeMixerGroup.cs" />
+    <Compile Include="Assets\SpawnPointManager.cs" />
     <Compile Include="Assets\SpreadingFire.cs" />
     <Compile Include="Assets\SubAudioManager.cs" />
     <Compile Include="Assets\WalkingPattern.cs" />

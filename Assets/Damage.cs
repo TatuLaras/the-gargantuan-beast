@@ -7,6 +7,7 @@ public class Damage : MonoBehaviour
 {
     Animator anim;
     MusicTrigger music;
+    Ragdoller ragdoll;
 
     [SerializeField] Weakspot[] weakspots;
     [SerializeField] int durability = 1;
@@ -16,6 +17,7 @@ public class Damage : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         music = GetComponent<MusicTrigger>();
+        ragdoll = GetComponent<Ragdoller>();
 
         foreach(Weakspot weakspot in weakspots)
         {
@@ -37,7 +39,8 @@ public class Damage : MonoBehaviour
 
     void Die()
     {
-        anim.SetTrigger("Die");
+        //anim.SetTrigger("Die");
+        ragdoll.ToggleRagdoll(true);
         music.dying = true;
         music.PlayDyingMusic();
     }

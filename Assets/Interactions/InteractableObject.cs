@@ -57,7 +57,10 @@ public class InteractableObject : MonoBehaviour
                     target = Quaternion.Euler(new Vector3(0, target.eulerAngles.y, 0));
                     //Quaternion smoothed = Quaternion.Lerp(rootObject.transform.rotation, target, 0.5f);
 
-                    rootObject.transform.rotation = Quaternion.RotateTowards(rootObject.transform.rotation, target, Time.deltaTime * paragliderSmoothspeed);
+                    if(Quaternion.Angle(target, rootObject.transform.rotation) >= 5f)
+                    {
+                        rootObject.transform.rotation = Quaternion.RotateTowards(rootObject.transform.rotation, target, Time.deltaTime * paragliderSmoothspeed);
+                    }
                 }
                 else
                 {
