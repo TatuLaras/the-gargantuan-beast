@@ -6,6 +6,7 @@ public class SimpleInstantiate : MonoBehaviour
 {
     [SerializeField] GameObject prefab;
     [SerializeField] int amount;
+    [SerializeField] float timeBetween = 0.5f;
         
     void Start()
     {
@@ -16,8 +17,8 @@ public class SimpleInstantiate : MonoBehaviour
     {
         for(int i = 0; i < amount; i++)
         {
-            Instantiate(prefab, this.transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(0.5f);
+            Instantiate(prefab, this.transform.position, Quaternion.identity, this.transform);
+            yield return new WaitForSeconds(timeBetween);
         }
     }
 }

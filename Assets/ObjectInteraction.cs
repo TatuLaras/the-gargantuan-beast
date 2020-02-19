@@ -13,6 +13,10 @@ public class ObjectInteraction : MonoBehaviour
     SteamVR_Behaviour_Pose pose;
     BodyCollision bodyCollision;
     FrictionAndVelocity frictionAndVelocity;
+    SFXManager sfx;
+
+    [SerializeField] AudioClip grabAudio;
+    [SerializeField] AudioClip holsterAudio;
 
     void Start()
     {
@@ -22,6 +26,7 @@ public class ObjectInteraction : MonoBehaviour
         pose = GetComponent<SteamVR_Behaviour_Pose>();
         bodyCollision = FindObjectOfType<BodyCollision>();
         frictionAndVelocity = GetComponentInParent<FrictionAndVelocity>();
+        sfx = FindObjectOfType<SFXManager>();
     }
 
     public void GrabOff()
@@ -41,6 +46,7 @@ public class ObjectInteraction : MonoBehaviour
                 {
                     objectInHand = null;
                     radius.grabbable = null;
+                    sfx.NewSFXAt(this.transform.position, holsterAudio, 0.8f);
                     return;
                 }
             }
@@ -55,13 +61,25 @@ public class ObjectInteraction : MonoBehaviour
                 }
             }
 
-            objectInHand.rb.useGravity = true;
-            objectInHand.rb.isKinematic = false;
-            objectInHand.rb.velocity = pose.GetVelocity();
-            objectInHand.rb.angularVelocity = pose.GetAngularVelocity();
-
-            objectInHand = null;
+            ReleaseItem();
         }
+    }
+
+    public void ReleaseItem()
+    {
+        if (objectInHand == null)
+            return;
+
+        if (objectInHand.objectType == ObjectType.paraglider)
+            frictionAndVelocity.paragliding = false;
+
+        objectInHand.rb.useGravity = true;
+        objectInHand.rb.isKinematic = false;
+        objectInHand.rb.velocity = pose.GetVelocity();
+        objectInHand.rb.angularVelocity = pose.GetAngularVelocity();
+        objectInHand.OnRelease();
+
+        objectInHand = null;
     }
 
     public void GrabOn()
@@ -80,11 +98,17 @@ public class ObjectInteraction : MonoBehaviour
             radius.grabbable.rb.useGravity = false;
             radius.grabbable.rb.isKinematic = true;
 
+            sfx.NewSFXAt(this.transform.position, grabAudio, 1f);
             haptics.Pulse(PulseTypes.grab, pose.inputSource);
         }
+    }
 
+    public void GrabOnTrigger()
+    {
         if (radius.slot != null)
         {
+            sfx.NewSFXAt(this.transform.position, grabAudio, 1f);
+
             objectInHand = radius.slot.TakeItemFromSlot();
 
             if (objectInHand != null)
@@ -98,4 +122,5 @@ public class ObjectInteraction : MonoBehaviour
             }
         }
     }
+
 }

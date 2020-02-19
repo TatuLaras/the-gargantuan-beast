@@ -16,6 +16,8 @@ public class Legs : MonoBehaviour
 
     [HideInInspector] public GameObject legRef;
     [HideInInspector] public bool grounded;
+    [HideInInspector] public GameObject ground = null;
+
 
     float distanceGizmo;
 
@@ -67,6 +69,8 @@ public class Legs : MonoBehaviour
 
         if (grounded == true && climbingManager.climbing == false)
         {
+            ground = hit.collider.gameObject;
+
             if (feetLenght <= distanceFromFloor)
             {
                 float fallingFlex = (rb.velocity.y < 0) ? rb.velocity.y : 0;

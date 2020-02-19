@@ -3,23 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
-[RequireComponent(typeof(Collider))]
 public class InteractableObject : MonoBehaviour
 {
     //[SerializeField] float locationStrenght = 100;
     //[SerializeField] float rotationStrenght = 400;
     BodyController player;
-    [SerializeField] float paragliderSmoothspeed = 2f;
+    float paragliderSmoothspeed = 60f;
 
     [HideInInspector] public GameObject handGrabbing = null;
     [HideInInspector] public Rigidbody rb;
 
     public GameObject rootObject;
 
-    public ObjectType objectType = ObjectType.undefined;
+    public ObjectType objectType;
     public bool doNotInteract = false;
     public SpreadingFire fire = null;
-    public GameObject handlebone;
+    public GameObject handlebone = null;
+
+    public bool permanent = false;
+    public InventorySlot slot;
 
     void Start()
     {
@@ -50,6 +52,11 @@ public class InteractableObject : MonoBehaviour
             {
                 if(handlebone != null)
                 {
+                    if(player.GetComponent<Legs>().grounded == true)
+                    {
+                        handGrabbing.GetComponentInParent<ObjectInteraction>().ReleaseItem();
+                    }
+
                     rootObject.transform.position = handGrabbing.transform.position;
                     handlebone.transform.rotation = handGrabbing.GetComponent<DetectInteractions>().paragliderPoint.transform.rotation;
 
@@ -82,34 +89,25 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
-    //void CalculateObjectPhysics()
-    //{
-    //    Vector3 targetPos = handGrabbing.transform.position;
-    //    Vector3 velocityToApproach = targetPos - this.transform.position;
-    //    rb.velocity = velocityToApproach * locationStrenght;
-    //    Quaternion targetRot = handGrabbing.transform.rotation;
+    public void OnRelease()
+    {
+        if(permanent == true && slot != null)
+        {
+            StartCoroutine(ReturnItem());
+        }
+    }
 
-    //    Quaternion velocityToTurn = targetRot * Quaternion.Inverse(this.transform.localRotation);
+    IEnumerator ReturnItem()
+    {
+        StartCoroutine(rootObject.GetComponent<DissolveObject>().Dissolve());
+        if(fire != null)
+            fire.ablaze = false;
+        yield return new WaitForSeconds(1.1f);
+        slot.PutItemInSlot(this);
 
-    //    float angle;
-    //    Vector3 axis;
-    //    velocityToTurn.ToAngleAxis(out angle, out axis);
 
-    //    if (angle > 180)
-    //        angle -= 360;
+        rootObject.GetComponent<DissolveObject>().ResetDissolve();
 
-    //    Vector3 finalAngularVelocity = (Time.fixedDeltaTime * angle * axis) * rotationStrenght;
-
-    //    finalAngularVelocity.x = float.IsNaN(finalAngularVelocity.x) ? 0 : finalAngularVelocity.x;
-    //    finalAngularVelocity.y = float.IsNaN(finalAngularVelocity.y) ? 0 : finalAngularVelocity.y;
-    //    finalAngularVelocity.z = float.IsNaN(finalAngularVelocity.z) ? 0 : finalAngularVelocity.z;
-
-    //    rb.angularVelocity = finalAngularVelocity;
-
-    //    if (Vector3.Distance(this.transform.localPosition, targetPos) > 0.5)
-    //    {
-    //        this.transform.localPosition = targetPos;
-    //    }
-    //}
+    }
 
 }

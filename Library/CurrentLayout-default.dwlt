@@ -14,42 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: -31992
-    y: -31949
-    width: 950
-    height: 394
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
   m_ShowMode: 4
   m_Title: 
-  m_RootView: {fileID: 4}
-  m_MinSize: {x: 950, y: 394}
+  m_RootView: {fileID: 3}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 122
-    width: 277
-    height: 222
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
-  m_ActualView: {fileID: 16}
-  m_Panes:
-  - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,19 +36,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 13}
-  - {fileID: 2}
+  - {fileID: 6}
   m_Position:
     serializedVersion: 2
-    x: 673
-    y: 0
-    width: 277
-    height: 344
-  m_MinSize: {x: 277, y: 294}
-  m_MaxSize: {x: 4002, y: 8044}
+    x: 0
+    y: 30
+    width: 1920
+    height: 947
+  m_MinSize: {x: 683, y: 494}
+  m_MaxSize: {x: 14004, y: 14044}
   vertical: 1
-  controlID: 745
---- !u!114 &4
+  controlID: 131
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,18 +60,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 4}
+  - {fileID: 2}
   - {fileID: 5}
-  - {fileID: 7}
-  - {fileID: 6}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 950
-    height: 394
-  m_MinSize: {x: 950, y: 300}
+    width: 1920
+    height: 997
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
---- !u!114 &5
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,12 +88,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 950
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &6
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,11 +109,36 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 374
-    width: 950
+    y: 977
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 12}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1920
+    height: 947
+  m_MinSize: {x: 683, y: 494}
+  m_MaxSize: {x: 14004, y: 14044}
+  vertical: 0
+  controlID: 132
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -155,17 +153,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 8}
-  - {fileID: 3}
+  - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 30
-    width: 950
-    height: 344
-  m_MinSize: {x: 683, y: 344}
-  m_MaxSize: {x: 12008, y: 8044}
-  vertical: 0
-  controlID: 94
+    y: 0
+    width: 1534
+    height: 947
+  m_MinSize: {x: 406, y: 494}
+  m_MaxSize: {x: 10002, y: 14044}
+  vertical: 1
+  controlID: 70
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,17 +178,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 9}
-  - {fileID: 12}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 673
-    height: 344
-  m_MinSize: {x: 406, y: 344}
-  m_MaxSize: {x: 8006, y: 8044}
-  vertical: 1
-  controlID: 95
+    width: 1534
+    height: 607
+  m_MinSize: {x: 406, y: 222}
+  m_MaxSize: {x: 8006, y: 4022}
+  vertical: 0
+  controlID: 71
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -200,22 +198,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 10}
-  - {fileID: 11}
+  m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 673
-    height: 230
-  m_MinSize: {x: 406, y: 222}
-  m_MaxSize: {x: 8006, y: 4022}
-  vertical: 0
-  controlID: 33
+    width: 296
+    height: 607
+  m_MinSize: {x: 202, y: 222}
+  m_MaxSize: {x: 4002, y: 4022}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,17 +230,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 296
     y: 0
-    width: 202
-    height: 230
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
-  m_ActualView: {fileID: 15}
+    width: 1238
+    height: 607
+  m_MinSize: {x: 204, y: 222}
+  m_MaxSize: {x: 4004, y: 4022}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 14}
+  - {fileID: 16}
+  - {fileID: 17}
   m_Selected: 0
-  m_LastSelected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -257,18 +258,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 202
-    y: 0
-    width: 471
-    height: 230
-  m_MinSize: {x: 204, y: 222}
-  m_MaxSize: {x: 4004, y: 4022}
-  m_ActualView: {fileID: 14}
+    x: 0
+    y: 607
+    width: 1534
+    height: 340
+  m_MinSize: {x: 232, y: 272}
+  m_MaxSize: {x: 10002, y: 10022}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 14}
-  - {fileID: 17}
+  - {fileID: 18}
+  - {fileID: 19}
+  - {fileID: 20}
+  - {fileID: 21}
+  - {fileID: 13}
   m_Selected: 0
-  m_LastSelected: 0
+  m_LastSelected: 4
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -284,19 +288,16 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
-    y: 230
-    width: 673
-    height: 114
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 19}
+    x: 1534
+    y: 0
+    width: 386
+    height: 947
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
+  m_ActualView: {fileID: 22}
   m_Panes:
-  - {fileID: 18}
-  - {fileID: 19}
-  - {fileID: 20}
-  - {fileID: 21}
-  m_Selected: 1
+  - {fileID: 22}
+  m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
@@ -306,24 +307,1160 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74496bb1dec304ba59a268d77032e300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
+  m_MinSize: {x: 1408, y: 560}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Shader Forge
+    m_Image: {fileID: 2800000, guid: a67aa329325af46d4a9c18d7ad10dc51, type: 3}
+    m_Tooltip: 
+  m_Pos:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 277
-    height: 122
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
-  m_ActualView: {fileID: 22}
-  m_Panes:
-  - {fileID: 22}
-  m_Selected: 0
-  m_LastSelected: 0
+    y: 438
+    width: 1534
+    height: 563
+  m_ViewDataDictionary: {fileID: 0}
+  shaderEvaluator:
+    editor: {fileID: 13}
+    cNodes:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    ghostNodes: []
+    scope: 0
+    shaderString: "Shader \"Shader Forge/texture_blending\" {\n    Properties {\n
+      \       _BumpMap (\"Normal Map\", 2D) = \"bump\" {}\n        _Color (\"Color\",
+      Color) = (1,1,1,1)\n        _Metallic (\"Metallic\", Range(0, 1)) = 0\n        _Gloss
+      (\"Gloss\", Range(0, 1)) = 0.8\n    }\n    SubShader {\n        Tags {\n            \"RenderType\"=\"Opaque\"\n
+      \       }\n        Pass {\n            Name \"FORWARD\"\n            Tags {\n
+      \               \"LightMode\"=\"ForwardBase\"\n            }\n            \n
+      \           \n            CGPROGRAM\n            #pragma vertex vert\n            #pragma
+      fragment frag\n            #define SHOULD_SAMPLE_SH ( defined (LIGHTMAP_OFF)
+      && defined(DYNAMICLIGHTMAP_OFF) )\n            #define _GLOSSYENV 1\n            #pragma
+      multi_compile_instancing\n            #include \"UnityCG.cginc\"\n            #include
+      \"AutoLight.cginc\"\n            #include \"Lighting.cginc\"\n            #include
+      \"UnityPBSLighting.cginc\"\n            #include \"UnityStandardBRDF.cginc\"\n
+      \           #pragma multi_compile_fwdbase_fullshadows\n            #pragma multi_compile
+      LIGHTMAP_OFF LIGHTMAP_ON\n            #pragma multi_compile DIRLIGHTMAP_OFF
+      DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE\n            #pragma multi_compile
+      DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON\n            #pragma multi_compile_fog\n
+      \           #pragma target 3.0\n            uniform sampler2D _BumpMap; uniform
+      float4 _BumpMap_ST;\n            UNITY_INSTANCING_BUFFER_START( Props )\n                UNITY_DEFINE_INSTANCED_PROP(
+      float4, _Color)\n                UNITY_DEFINE_INSTANCED_PROP( float, _Metallic)\n
+      \               UNITY_DEFINE_INSTANCED_PROP( float, _Gloss)\n            UNITY_INSTANCING_BUFFER_END(
+      Props )\n            struct VertexInput {\n                float4 vertex : POSITION;\n
+      \               float3 normal : NORMAL;\n                float4 tangent : TANGENT;\n
+      \               float2 texcoord0 : TEXCOORD0;\n                float2 texcoord1
+      : TEXCOORD1;\n                float2 texcoord2 : TEXCOORD2;\n                float4
+      vertexColor : COLOR;\n            };\n            struct VertexOutput {\n                float4
+      pos : SV_POSITION;\n                UNITY_VERTEX_INPUT_INSTANCE_ID\n                float2
+      uv0 : TEXCOORD0;\n                float2 uv1 : TEXCOORD1;\n                float2
+      uv2 : TEXCOORD2;\n                float4 posWorld : TEXCOORD3;\n                float3
+      normalDir : TEXCOORD4;\n                float3 tangentDir : TEXCOORD5;\n                float3
+      bitangentDir : TEXCOORD6;\n                float4 vertexColor : COLOR;\n                LIGHTING_COORDS(7,8)\n
+      \               UNITY_FOG_COORDS(9)\n                #if defined(LIGHTMAP_ON)
+      || defined(UNITY_SHOULD_SAMPLE_SH)\n                    float4 ambientOrLightmapUV
+      : TEXCOORD10;\n                #endif\n            };\n            VertexOutput
+      vert (VertexInput v) {\n                VertexOutput o = (VertexOutput)0;\n
+      \               UNITY_SETUP_INSTANCE_ID( v );\n                UNITY_TRANSFER_INSTANCE_ID(
+      v, o );\n                o.uv0 = v.texcoord0;\n                o.uv1 = v.texcoord1;\n
+      \               o.uv2 = v.texcoord2;\n                o.vertexColor = v.vertexColor;\n
+      \               #ifdef LIGHTMAP_ON\n                    o.ambientOrLightmapUV.xy
+      = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;\n                    o.ambientOrLightmapUV.zw
+      = 0;\n                #elif UNITY_SHOULD_SAMPLE_SH\n                #endif\n
+      \               #ifdef DYNAMICLIGHTMAP_ON\n                    o.ambientOrLightmapUV.zw
+      = v.texcoord2.xy * unity_DynamicLightmapST.xy + unity_DynamicLightmapST.zw;\n
+      \               #endif\n                o.normalDir = UnityObjectToWorldNormal(v.normal);\n
+      \               o.tangentDir = normalize( mul( unity_ObjectToWorld, float4(
+      v.tangent.xyz, 0.0 ) ).xyz );\n                o.bitangentDir = normalize(cross(o.normalDir,
+      o.tangentDir) * v.tangent.w);\n                o.posWorld = mul(unity_ObjectToWorld,
+      v.vertex);\n                float3 lightColor = _LightColor0.rgb;\n                o.pos
+      = UnityObjectToClipPos( v.vertex );\n                UNITY_TRANSFER_FOG(o,o.pos);\n
+      \               TRANSFER_VERTEX_TO_FRAGMENT(o)\n                return o;\n
+      \           }\n            float4 frag(VertexOutput i) : COLOR {\n                UNITY_SETUP_INSTANCE_ID(
+      i );\n                i.normalDir = normalize(i.normalDir);\n                float3x3
+      tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);\n                float3
+      viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);\n                float3
+      _BumpMap_var = UnpackNormal(tex2D(_BumpMap,TRANSFORM_TEX(i.uv0, _BumpMap)));\n
+      \               float3 normalLocal = _BumpMap_var.rgb;\n                float3
+      normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed
+      normals\n                float3 viewReflectDirection = reflect( -viewDirection,
+      normalDirection );\n                float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);\n
+      \               float3 lightColor = _LightColor0.rgb;\n                float3
+      halfDirection = normalize(viewDirection+lightDirection);\n////// Lighting:\n
+      \               float attenuation = LIGHT_ATTENUATION(i);\n                float3
+      attenColor = attenuation * _LightColor0.xyz;\n                float Pi = 3.141592654;\n
+      \               float InvPi = 0.31830988618;\n///////// Gloss:\n                float
+      _Gloss_var = UNITY_ACCESS_INSTANCED_PROP( Props, _Gloss );\n                float
+      gloss = _Gloss_var;\n                float perceptualRoughness = 1.0 - _Gloss_var;\n
+      \               float roughness = perceptualRoughness * perceptualRoughness;\n
+      \               float specPow = exp2( gloss * 10.0 + 1.0 );\n/////// GI Data:\n
+      \               UnityLight light;\n                #ifdef LIGHTMAP_OFF\n                    light.color
+      = lightColor;\n                    light.dir = lightDirection;\n                    light.ndotl
+      = LambertTerm (normalDirection, light.dir);\n                #else\n                    light.color
+      = half3(0.f, 0.f, 0.f);\n                    light.ndotl = 0.0f;\n                    light.dir
+      = half3(0.f, 0.f, 0.f);\n                #endif\n                UnityGIInput
+      d;\n                d.light = light;\n                d.worldPos = i.posWorld.xyz;\n
+      \               d.worldViewDir = viewDirection;\n                d.atten = attenuation;\n
+      \               #if defined(LIGHTMAP_ON) || defined(DYNAMICLIGHTMAP_ON)\n                    d.ambient
+      = 0;\n                    d.lightmapUV = i.ambientOrLightmapUV;\n                #else\n
+      \                   d.ambient = i.ambientOrLightmapUV;\n                #endif\n
+      \               #if UNITY_SPECCUBE_BLENDING || UNITY_SPECCUBE_BOX_PROJECTION\n
+      \                   d.boxMin[0] = unity_SpecCube0_BoxMin;\n                    d.boxMin[1]
+      = unity_SpecCube1_BoxMin;\n                #endif\n                #if UNITY_SPECCUBE_BOX_PROJECTION\n
+      \                   d.boxMax[0] = unity_SpecCube0_BoxMax;\n                    d.boxMax[1]
+      = unity_SpecCube1_BoxMax;\n                    d.probePosition[0] = unity_SpecCube0_ProbePosition;\n
+      \                   d.probePosition[1] = unity_SpecCube1_ProbePosition;\n                #endif\n
+      \               d.probeHDR[0] = unity_SpecCube0_HDR;\n                d.probeHDR[1]
+      = unity_SpecCube1_HDR;\n                Unity_GlossyEnvironmentData ugls_en_data;\n
+      \               ugls_en_data.roughness = 1.0 - gloss;\n                ugls_en_data.reflUVW
+      = viewReflectDirection;\n                UnityGI gi = UnityGlobalIllumination(d,
+      1, normalDirection, ugls_en_data );\n                lightDirection = gi.light.dir;\n
+      \               lightColor = gi.light.color;\n////// Specular:\n                float
+      NdotL = saturate(dot( normalDirection, lightDirection ));\n                float
+      LdotH = saturate(dot(lightDirection, halfDirection));\n                float
+      _Metallic_var = UNITY_ACCESS_INSTANCED_PROP( Props, _Metallic );\n                float3
+      specularColor = _Metallic_var;\n                float specularMonochrome;\n
+      \               float4 _Color_var = UNITY_ACCESS_INSTANCED_PROP( Props, _Color
+      );\n                float3 diffuseColor = (i.vertexColor.rgb*_Color_var.rgb);
+      // Need this for specular when using metallic\n                diffuseColor
+      = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor,
+      specularMonochrome );\n                specularMonochrome = 1.0-specularMonochrome;\n
+      \               float NdotV = abs(dot( normalDirection, viewDirection ));\n
+      \               float NdotH = saturate(dot( normalDirection, halfDirection ));\n
+      \               float VdotH = saturate(dot( viewDirection, halfDirection ));\n
+      \               float visTerm = SmithJointGGXVisibilityTerm( NdotL, NdotV, roughness
+      );\n                float normTerm = GGXTerm(NdotH, roughness);\n                float
+      specularPBL = (visTerm*normTerm) * UNITY_PI;\n                #ifdef UNITY_COLORSPACE_GAMMA\n
+      \                   specularPBL = sqrt(max(1e-4h, specularPBL));\n                #endif\n
+      \               specularPBL = max(0, specularPBL * NdotL);\n                #if
+      defined(_SPECULARHIGHLIGHTS_OFF)\n                    specularPBL = 0.0;\n                #endif\n
+      \               half surfaceReduction;\n                #ifdef UNITY_COLORSPACE_GAMMA\n
+      \                   surfaceReduction = 1.0-0.28*roughness*perceptualRoughness;\n
+      \               #else\n                    surfaceReduction = 1.0/(roughness*roughness
+      + 1.0);\n                #endif\n                specularPBL *= any(specularColor)
+      ? 1.0 : 0.0;\n                float3 directSpecular = attenColor*specularPBL*FresnelTerm(specularColor,
+      LdotH);\n                half grazingTerm = saturate( gloss + specularMonochrome
+      );\n                float3 indirectSpecular = (gi.indirect.specular);\n                indirectSpecular
+      *= FresnelLerp (specularColor, grazingTerm, NdotV);\n                indirectSpecular
+      *= surfaceReduction;\n                float3 specular = (directSpecular + indirectSpecular);\n///////
+      Diffuse:\n                NdotL = max(0.0,dot( normalDirection, lightDirection
+      ));\n                half fd90 = 0.5 + 2 * LdotH * LdotH * (1-gloss);\n                float
+      nlPow5 = Pow5(1-NdotL);\n                float nvPow5 = Pow5(1-NdotV);\n                float3
+      directDiffuse = ((1 +(fd90 - 1)*nlPow5) * (1 + (fd90 - 1)*nvPow5) * NdotL) *
+      attenColor;\n                float3 indirectDiffuse = float3(0,0,0);\n                indirectDiffuse
+      += gi.indirect.diffuse;\n                float3 diffuse = (directDiffuse + indirectDiffuse)
+      * diffuseColor;\n/// Final Color:\n                float3 finalColor = diffuse
+      + specular;\n                fixed4 finalRGBA = fixed4(finalColor,1);\n                UNITY_APPLY_FOG(i.fogCoord,
+      finalRGBA);\n                return finalRGBA;\n            }\n            ENDCG\n
+      \       }\n        Pass {\n            Name \"FORWARD_DELTA\"\n            Tags
+      {\n                \"LightMode\"=\"ForwardAdd\"\n            }\n            Blend
+      One One\n            \n            \n            CGPROGRAM\n            #pragma
+      vertex vert\n            #pragma fragment frag\n            #define SHOULD_SAMPLE_SH
+      ( defined (LIGHTMAP_OFF) && defined(DYNAMICLIGHTMAP_OFF) )\n            #define
+      _GLOSSYENV 1\n            #pragma multi_compile_instancing\n            #include
+      \"UnityCG.cginc\"\n            #include \"AutoLight.cginc\"\n            #include
+      \"Lighting.cginc\"\n            #include \"UnityPBSLighting.cginc\"\n            #include
+      \"UnityStandardBRDF.cginc\"\n            #pragma multi_compile_fwdadd_fullshadows\n
+      \           #pragma multi_compile LIGHTMAP_OFF LIGHTMAP_ON\n            #pragma
+      multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE\n            #pragma
+      multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON\n            #pragma multi_compile_fog\n
+      \           #pragma target 3.0\n            uniform sampler2D _BumpMap; uniform
+      float4 _BumpMap_ST;\n            UNITY_INSTANCING_BUFFER_START( Props )\n                UNITY_DEFINE_INSTANCED_PROP(
+      float4, _Color)\n                UNITY_DEFINE_INSTANCED_PROP( float, _Metallic)\n
+      \               UNITY_DEFINE_INSTANCED_PROP( float, _Gloss)\n            UNITY_INSTANCING_BUFFER_END(
+      Props )\n            struct VertexInput {\n                float4 vertex : POSITION;\n
+      \               float3 normal : NORMAL;\n                float4 tangent : TANGENT;\n
+      \               float2 texcoord0 : TEXCOORD0;\n                float2 texcoord1
+      : TEXCOORD1;\n                float2 texcoord2 : TEXCOORD2;\n                float4
+      vertexColor : COLOR;\n            };\n            struct VertexOutput {\n                float4
+      pos : SV_POSITION;\n                UNITY_VERTEX_INPUT_INSTANCE_ID\n                float2
+      uv0 : TEXCOORD0;\n                float2 uv1 : TEXCOORD1;\n                float2
+      uv2 : TEXCOORD2;\n                float4 posWorld : TEXCOORD3;\n                float3
+      normalDir : TEXCOORD4;\n                float3 tangentDir : TEXCOORD5;\n                float3
+      bitangentDir : TEXCOORD6;\n                float4 vertexColor : COLOR;\n                LIGHTING_COORDS(7,8)\n
+      \               UNITY_FOG_COORDS(9)\n            };\n            VertexOutput
+      vert (VertexInput v) {\n                VertexOutput o = (VertexOutput)0;\n
+      \               UNITY_SETUP_INSTANCE_ID( v );\n                UNITY_TRANSFER_INSTANCE_ID(
+      v, o );\n                o.uv0 = v.texcoord0;\n                o.uv1 = v.texcoord1;\n
+      \               o.uv2 = v.texcoord2;\n                o.vertexColor = v.vertexColor;\n
+      \               o.normalDir = UnityObjectToWorldNormal(v.normal);\n                o.tangentDir
+      = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );\n
+      \               o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir)
+      * v.tangent.w);\n                o.posWorld = mul(unity_ObjectToWorld, v.vertex);\n
+      \               float3 lightColor = _LightColor0.rgb;\n                o.pos
+      = UnityObjectToClipPos( v.vertex );\n                UNITY_TRANSFER_FOG(o,o.pos);\n
+      \               TRANSFER_VERTEX_TO_FRAGMENT(o)\n                return o;\n
+      \           }\n            float4 frag(VertexOutput i) : COLOR {\n                UNITY_SETUP_INSTANCE_ID(
+      i );\n                i.normalDir = normalize(i.normalDir);\n                float3x3
+      tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);\n                float3
+      viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);\n                float3
+      _BumpMap_var = UnpackNormal(tex2D(_BumpMap,TRANSFORM_TEX(i.uv0, _BumpMap)));\n
+      \               float3 normalLocal = _BumpMap_var.rgb;\n                float3
+      normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed
+      normals\n                float3 lightDirection = normalize(lerp(_WorldSpaceLightPos0.xyz,
+      _WorldSpaceLightPos0.xyz - i.posWorld.xyz,_WorldSpaceLightPos0.w));\n                float3
+      lightColor = _LightColor0.rgb;\n                float3 halfDirection = normalize(viewDirection+lightDirection);\n//////
+      Lighting:\n                float attenuation = LIGHT_ATTENUATION(i);\n                float3
+      attenColor = attenuation * _LightColor0.xyz;\n                float Pi = 3.141592654;\n
+      \               float InvPi = 0.31830988618;\n///////// Gloss:\n                float
+      _Gloss_var = UNITY_ACCESS_INSTANCED_PROP( Props, _Gloss );\n                float
+      gloss = _Gloss_var;\n                float perceptualRoughness = 1.0 - _Gloss_var;\n
+      \               float roughness = perceptualRoughness * perceptualRoughness;\n
+      \               float specPow = exp2( gloss * 10.0 + 1.0 );\n////// Specular:\n
+      \               float NdotL = saturate(dot( normalDirection, lightDirection
+      ));\n                float LdotH = saturate(dot(lightDirection, halfDirection));\n
+      \               float _Metallic_var = UNITY_ACCESS_INSTANCED_PROP( Props, _Metallic
+      );\n                float3 specularColor = _Metallic_var;\n                float
+      specularMonochrome;\n                float4 _Color_var = UNITY_ACCESS_INSTANCED_PROP(
+      Props, _Color );\n                float3 diffuseColor = (i.vertexColor.rgb*_Color_var.rgb);
+      // Need this for specular when using metallic\n                diffuseColor
+      = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor,
+      specularMonochrome );\n                specularMonochrome = 1.0-specularMonochrome;\n
+      \               float NdotV = abs(dot( normalDirection, viewDirection ));\n
+      \               float NdotH = saturate(dot( normalDirection, halfDirection ));\n
+      \               float VdotH = saturate(dot( viewDirection, halfDirection ));\n
+      \               float visTerm = SmithJointGGXVisibilityTerm( NdotL, NdotV, roughness
+      );\n                float normTerm = GGXTerm(NdotH, roughness);\n                float
+      specularPBL = (visTerm*normTerm) * UNITY_PI;\n                #ifdef UNITY_COLORSPACE_GAMMA\n
+      \                   specularPBL = sqrt(max(1e-4h, specularPBL));\n                #endif\n
+      \               specularPBL = max(0, specularPBL * NdotL);\n                #if
+      defined(_SPECULARHIGHLIGHTS_OFF)\n                    specularPBL = 0.0;\n                #endif\n
+      \               specularPBL *= any(specularColor) ? 1.0 : 0.0;\n                float3
+      directSpecular = attenColor*specularPBL*FresnelTerm(specularColor, LdotH);\n
+      \               float3 specular = directSpecular;\n/////// Diffuse:\n                NdotL
+      = max(0.0,dot( normalDirection, lightDirection ));\n                half fd90
+      = 0.5 + 2 * LdotH * LdotH * (1-gloss);\n                float nlPow5 = Pow5(1-NdotL);\n
+      \               float nvPow5 = Pow5(1-NdotV);\n                float3 directDiffuse
+      = ((1 +(fd90 - 1)*nlPow5) * (1 + (fd90 - 1)*nvPow5) * NdotL) * attenColor;\n
+      \               float3 diffuse = directDiffuse * diffuseColor;\n/// Final Color:\n
+      \               float3 finalColor = diffuse + specular;\n                fixed4
+      finalRGBA = fixed4(finalColor * 1,0);\n                UNITY_APPLY_FOG(i.fogCoord,
+      finalRGBA);\n                return finalRGBA;\n            }\n            ENDCG\n
+      \       }\n        Pass {\n            Name \"Meta\"\n            Tags {\n                \"LightMode\"=\"Meta\"\n
+      \           }\n            Cull Off\n            \n            CGPROGRAM\n            #pragma
+      vertex vert\n            #pragma fragment frag\n            #define UNITY_PASS_META
+      1\n            #define SHOULD_SAMPLE_SH ( defined (LIGHTMAP_OFF) && defined(DYNAMICLIGHTMAP_OFF)
+      )\n            #define _GLOSSYENV 1\n            #pragma multi_compile_instancing\n
+      \           #include \"UnityCG.cginc\"\n            #include \"Lighting.cginc\"\n
+      \           #include \"UnityPBSLighting.cginc\"\n            #include \"UnityStandardBRDF.cginc\"\n
+      \           #include \"UnityMetaPass.cginc\"\n            #pragma fragmentoption
+      ARB_precision_hint_fastest\n            #pragma multi_compile_shadowcaster\n
+      \           #pragma multi_compile LIGHTMAP_OFF LIGHTMAP_ON\n            #pragma
+      multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE\n            #pragma
+      multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON\n            #pragma multi_compile_fog\n
+      \           #pragma target 3.0\n            UNITY_INSTANCING_BUFFER_START( Props
+      )\n                UNITY_DEFINE_INSTANCED_PROP( float4, _Color)\n                UNITY_DEFINE_INSTANCED_PROP(
+      float, _Metallic)\n                UNITY_DEFINE_INSTANCED_PROP( float, _Gloss)\n
+      \           UNITY_INSTANCING_BUFFER_END( Props )\n            struct VertexInput
+      {\n                float4 vertex : POSITION;\n                float2 texcoord1
+      : TEXCOORD1;\n                float2 texcoord2 : TEXCOORD2;\n                float4
+      vertexColor : COLOR;\n            };\n            struct VertexOutput {\n                float4
+      pos : SV_POSITION;\n                UNITY_VERTEX_INPUT_INSTANCE_ID\n                float2
+      uv1 : TEXCOORD0;\n                float2 uv2 : TEXCOORD1;\n                float4
+      posWorld : TEXCOORD2;\n                float4 vertexColor : COLOR;\n            };\n
+      \           VertexOutput vert (VertexInput v) {\n                VertexOutput
+      o = (VertexOutput)0;\n                UNITY_SETUP_INSTANCE_ID( v );\n                UNITY_TRANSFER_INSTANCE_ID(
+      v, o );\n                o.uv1 = v.texcoord1;\n                o.uv2 = v.texcoord2;\n
+      \               o.vertexColor = v.vertexColor;\n                o.posWorld =
+      mul(unity_ObjectToWorld, v.vertex);\n                o.pos = UnityMetaVertexPosition(v.vertex,
+      v.texcoord1.xy, v.texcoord2.xy, unity_LightmapST, unity_DynamicLightmapST );\n
+      \               return o;\n            }\n            float4 frag(VertexOutput
+      i) : SV_Target {\n                UNITY_SETUP_INSTANCE_ID( i );\n                float3
+      viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);\n                UnityMetaInput
+      o;\n                UNITY_INITIALIZE_OUTPUT( UnityMetaInput, o );\n                \n
+      \               o.Emission = 0;\n                \n                float4 _Color_var
+      = UNITY_ACCESS_INSTANCED_PROP( Props, _Color );\n                float3 diffColor
+      = (i.vertexColor.rgb*_Color_var.rgb);\n                float specularMonochrome;\n
+      \               float3 specColor;\n                float _Metallic_var = UNITY_ACCESS_INSTANCED_PROP(
+      Props, _Metallic );\n                diffColor = DiffuseAndSpecularFromMetallic(
+      diffColor, _Metallic_var, specColor, specularMonochrome );\n                float
+      _Gloss_var = UNITY_ACCESS_INSTANCED_PROP( Props, _Gloss );\n                float
+      roughness = 1.0 - _Gloss_var;\n                o.Albedo = diffColor + specColor
+      * roughness * roughness * 0.5;\n                \n                return UnityMetaFragment(
+      o );\n            }\n            ENDCG\n        }\n    }\n    FallBack \"Diffuse\"\n
+      \   CustomEditor \"ShaderForgeMaterialInspector\"\n}\n"
+    ps: {fileID: 0}
+    properties: {fileID: 0}
+    mOut: {fileID: 0}
+  preview:
+    editor: {fileID: 13}
+    settings:
+      previewAutoRotate: 1
+      colorBg: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+    mesh: {fileID: 4300024, guid: 27cd3ffabf618924f9c9eeefb09b60e0, type: 3}
+    internalMaterial: {fileID: 0}
+    render: {fileID: 0}
+    previewStyle:
+      m_Name: textfield
+      m_Normal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: -7902305245580594835, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 3
+        m_Right: 3
+        m_Top: 3
+        m_Bottom: 3
+      m_Margin:
+        m_Left: 4
+        m_Right: 4
+        m_Top: 2
+        m_Bottom: 2
+      m_Padding:
+        m_Left: 3
+        m_Right: 3
+        m_Top: 1
+        m_Bottom: 1
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 11
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 0
+      m_TextClipping: 1
+      m_ImagePosition: 3
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    backgroundTexture: {fileID: 0}
+    isDraggingLMB: 0
+    dragStartPosLMB: {x: 0, y: 0}
+    rotMeshStart: {x: -30, y: 0}
+    rotMesh: {x: 30, y: -1646.952}
+    rotMeshSmooth: {x: 30, y: -1646.5021}
+    isDraggingRMB: 0
+    cam: {fileID: 0}
+    camPivot: {fileID: 0}
+    lights:
+    - {fileID: 0}
+    - {fileID: 0}
+    enabled: 1
+    previewRect:
+      serializedVersion: 2
+      x: 0
+      y: 43
+      width: 320
+      height: 320
+    targetFOV: 30
+    smoothFOV: 30
+  nodeView: {fileID: 0}
+  nodeBrowser: {fileID: 0}
+  ps: {fileID: 0}
+  mainNode: {fileID: 0}
+  statusBox:
+    editor: {fileID: 13}
+    vCount:
+      min: 0
+      max: 0
+    fCount:
+      min: 0
+      max: 0
+    vtCount:
+      min: 0
+      max: 0
+    ftCount:
+      min: 0
+      max: 0
+    platform: 0
+    labelStyle:
+      m_Name: ControlLabel
+      m_Normal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 3696117970163896625, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0.19607843, b: 0.9019608, a: 1}
+      m_Focused:
+        m_Background: {fileID: 3696117970163896625, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0.19607843, b: 0.9019608, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 3696117970163896625, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0.19607843, b: 0.9019608, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 3696117970163896625, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0.19607843, b: 0.9019608, a: 1}
+      m_Border:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 8
+        m_Right: 0
+        m_Top: 3
+        m_Bottom: 1
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 11
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 0
+      m_TextClipping: 1
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    labelStyleCentered:
+      m_Name: ControlLabel
+      m_Normal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 3696117970163896625, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0.19607843, b: 0.9019608, a: 1}
+      m_Focused:
+        m_Background: {fileID: 3696117970163896625, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0.19607843, b: 0.9019608, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 3696117970163896625, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0.19607843, b: 0.9019608, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 3696117970163896625, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0.19607843, b: 0.9019608, a: 1}
+      m_Border:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 8
+        m_Right: 0
+        m_Top: 3
+        m_Bottom: 1
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 11
+      m_FontStyle: 0
+      m_Alignment: 4
+      m_WordWrap: 0
+      m_RichText: 0
+      m_TextClipping: 1
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    holderStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    headerStyle:
+      m_Name: Toolbar
+      m_Normal:
+        m_Background: {fileID: -8748538222344408585, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 0.9019608}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 0.9019608}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0.9019608, g: 0.9019608, b: 0.9019608, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 0.9019608}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 2
+        m_Bottom: 2
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 6
+        m_Right: 6
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 3459068928204737762, guid: 0000000000000000d000000000000000,
+        type: 0}
+      m_FontSize: 10
+      m_FontStyle: 0
+      m_Alignment: 3
+      m_WordWrap: 0
+      m_RichText: 0
+      m_TextClipping: 1
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: -1}
+      m_FixedWidth: 0
+      m_FixedHeight: 18
+      m_StretchWidth: 0
+      m_StretchHeight: 0
+  nodes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  windowStyle:
+    m_Name: textfield
+    m_Normal:
+      m_Background: {fileID: 2597227618725028271, guid: 0000000000000000d000000000000000,
+        type: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: -7902305245580594835, guid: 0000000000000000d000000000000000,
+        type: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 3
+      m_Right: 3
+      m_Top: 3
+      m_Bottom: 3
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 11
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 0
+    m_TextClipping: 1
+    m_ImagePosition: 3
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  titleStyle:
+    m_Name: LargeLabel
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 0.92156863}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 4
+      m_Right: 4
+      m_Top: 4
+      m_Bottom: 4
+    m_Padding:
+      m_Left: 2
+      m_Right: 2
+      m_Top: 2
+      m_Bottom: 2
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 3459068928204737762, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 0
+    m_TextClipping: 1
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  versionStyle:
+    m_Name: MiniBoldLabel
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 0.9019608}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 0.9019608}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0.9019608, g: 0.9019608, b: 0.9019608, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 0.9019608}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 1
+      m_Right: 4
+      m_Top: 3
+      m_Bottom: 1
+    m_Padding:
+      m_Left: 1
+      m_Right: 2
+      m_Top: 1
+      m_Bottom: 1
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 4028824154787511821, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_FontSize: 9
+    m_FontStyle: 0
+    m_Alignment: 3
+    m_WordWrap: 0
+    m_RichText: 0
+    m_TextClipping: 1
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  nodeScrollbarStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  separatorLeft: {fileID: 0}
+  separatorRight: {fileID: 0}
+  mousePosition: {x: 41, y: -11}
+  currentShaderAsset: {fileID: 4800000, guid: c54654b5460815f499fc33476a34ff9a, type: 3}
+  currentShaderPath: Shader Forge/texture_blending
+  nodeTemplates:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  shaderOutdated: 1
+  deltaTime: 0.02
+  dockedLastUpdate: 13321.554
+  _docked: 1
+  previousPosition:
+    serializedVersion: 2
+    x: 0
+    y: 438
+    width: 1534
+    height: 563
+  closeMe: 0
+  screenshotInProgress: 0
+  firstFrameScreenshotInProgress: 0
+  preScreenshotZoom: 1
+  shaderPresetNames:
+  - Unlit
+  - 'Lit
+
+    (PBR)'
+  - 'Lit
+
+    (Basic)'
+  - Custom Lighting
+  - Sprite
+  - 'Particle
+
+    (Additive)'
+  - 'Particle
+
+    (Alpha-Blended)'
+  - 'Particle
+
+    (Multiplicative)'
+  - Sky
+  - Post-Effect
+  shaderPresetShaders:
+  - Unlit
+  - PBR
+  - Basic
+  - CustomLighting
+  - Sprite
+  - ParticleAdditive
+  - ParticleAlphaBlended
+  - ParticleMultiplicative
+  - Sky
+  - PostEffect
+  shaderPresetDescriptions:
+  - Unlit means that light sources will not affect this shader, it will simply have
+    the color you give it, regardless of the scene setup.
+  - Lit (PBR) is set up to match Unity's Physically Based shader, affected by lightmaps,
+    light probes, reflection probes etc.
+  - Lit (Basic) is the old-school Blinn-Phong lighting model. Direct lighting only,
+    no lightmap or probe data.
+  - Custom Lighting is set up with a simple example of how you can create your own
+    lighting models. The initial setup is a Blinn-Phong shader.
+  - Sprite is for creating 2D shaders to be used on sprites. These will have the pixel-perfect
+    option and sort properly with other 2D sprites.
+  - Particle (Additive) is generally for glow effects, lightshafts, sparks etc. Primarily
+    used in particle systems.
+  - Particle (Alpha-Blended) is generally for debris effects, dusty smoke etc. Primarily
+    used in particle systems.
+  - Particle (Multiplicative) is generally for darkening effects, black smoke, evil-looking
+    anti-glow etc. Primarily used in particle systems.
+  - Sky is for creating shaders to be used with a sky material in your scene. It will
+    render behind everything else.
+  - Post-Effect is for creating shaders meant to render full-screen rather than at
+    a position in the world, commonly used for post-process effects
+  displaySettings: 0
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -345,10 +1482,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 204
-    y: 20
-    width: 467
-    height: 208
+    x: 296
+    y: 73
+    width: 1236
+    height: 588
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 46710f8398d382743a96d0c0fcce4556
@@ -360,9 +1497,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 92.99788, y: 9.949371, z: 1625.9025}
+    m_Target: {x: -116.169365, y: 378.58612, z: -34.65752}
     speed: 2
-    m_Value: {x: 92.99788, y: 9.949371, z: 1625.9025}
+    m_Value: {x: -116.169365, y: 378.58612, z: -34.65752}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -383,28 +1520,28 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 1
+      m_Target: 0
       speed: 2
-      m_Value: 1
+      m_Value: 0
     zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.287473, y: 0.6509553, z: -0.29304007, w: 0.6385705}
+    m_Target: {x: -0.12741293, y: 0.61288315, z: -0.10130904, w: -0.7732985}
     speed: 2
-    m_Value: {x: 0.28938326, y: 0.6500641, z: -0.2949875, w: 0.63769627}
+    m_Value: {x: -0.12905975, y: 0.6000067, z: -0.099187374, w: -0.7832607}
   m_Size:
-    m_Target: 267.32864
+    m_Target: 322.60535
     speed: 2
-    m_Value: 173.59003
+    m_Value: 295.9682
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
     m_Speed: 1
-    m_SpeedNormalized: 0.49748743
+    m_SpeedNormalized: 0.4974874
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -445,16 +1582,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 20
-    width: 200
-    height: 208
+    y: 73
+    width: 296
+    height: 588
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: aafaffff
-      m_LastClickedID: -1366
-      m_ExpandedIDs: 72faffff6afbffff505500007a550000d85500002856000054560000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 2afbffff26590000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -470,7 +1607,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 10}
+        m_ClientGUIView: {fileID: 9}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -499,10 +1636,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2
-    y: 142
-    width: 275
-    height: 200
+    x: 296
+    y: 73
+    width: 1236
+    height: 607
   m_ViewDataDictionary: {fileID: 0}
   m_VSyncEnabled: 0
   m_MaximizeOnPlay: 0
@@ -515,10 +1652,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -193.5
-    m_HBaseRangeMax: 193.5
-    m_VBaseRangeMin: -140
-    m_VBaseRangeMax: 140
+    m_HBaseRangeMin: -618
+    m_HBaseRangeMax: 618
+    m_VBaseRangeMin: -295
+    m_VBaseRangeMax: 295
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -527,7 +1664,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -536,25 +1673,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 387
-      height: 280
+      width: 1236
+      height: 590
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 193.5, y: 140}
+    m_Translation: {x: 618, y: 295}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -193.5
-      y: -140
-      width: 387
-      height: 280
+      x: -618
+      y: -295
+      width: 1236
+      height: 590
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 1
-  m_LastWindowPixelSize: {x: 387, y: 297}
+  m_LastWindowPixelSize: {x: 1236, y: 607}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -607,9 +1744,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 706
-    width: 1531
-    height: 295
+    y: 680
+    width: 1534
+    height: 321
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -634,10 +1771,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 1a350000
-    m_LastClickedID: 13594
-    m_ExpandedIDs: 000000001a350000623b0000ec3e00000241000062430000a0450000b44a00009052000000ca9a3b
+    scrollPos: {x: 0, y: 65}
+    m_SelectedIDs: 5e370000
+    m_LastClickedID: 14174
+    m_ExpandedIDs: 000000005e37000078400000864d00006056000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -665,7 +1802,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001a350000623b0000ec3e00000241000062430000a0450000b44a000090520000
+    m_ExpandedIDs: 000000005e370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -690,10 +1827,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 1cfaffff
-    m_LastClickedInstanceID: -1508
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000ce370000
+    m_ExpandedInstanceIDs: c6230000ce370000044c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -709,7 +1846,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 12}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -717,7 +1854,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 20.5}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 298
@@ -743,9 +1880,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 250
-    width: 671
-    height: 92
+    y: 699
+    width: 1534
+    height: 302
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &20
 MonoBehaviour:
@@ -769,13 +1906,13 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 706
-    width: 1531
-    height: 295
+    y: 499
+    width: 1360
+    height: 502
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1366
+  m_LastSelectedObjectID: 22416
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -808,6 +1945,7 @@ MonoBehaviour:
     - {fileID: 5116208574251339831, guid: ab3238541a0bb5f42bdc3daf92502486, type: 2}
     - {fileID: 7418759675829874846, guid: 9de2b49d730d7ea4eafa153ec5931246, type: 2}
     - {fileID: -8877821040364713559, guid: 9de2b49d730d7ea4eafa153ec5931246, type: 2}
+    - {fileID: 4971213196806011821, guid: 0aa51267f0216c646b916c8b57896715, type: 2}
     m_ValueSerializationHelper:
     - e00: 1
       e01: 0
@@ -873,11 +2011,27 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: ab3238541a0bb5f42bdc3daf92502486,
+  m_AnimatorController: {fileID: 9100000, guid: 0aa51267f0216c646b916c8b57896715,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 5116208574251339831, guid: ab3238541a0bb5f42bdc3daf92502486,
+  - m_Target: {fileID: 4971213196806011821, guid: 0aa51267f0216c646b916c8b57896715,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -912,10 +2066,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2
-    y: 20
-    width: 275
-    height: 100
+    x: 1534
+    y: 73
+    width: 384
+    height: 928
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -928,4 +2082,4 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 478
+  m_LastVerticalScrollValue: 800

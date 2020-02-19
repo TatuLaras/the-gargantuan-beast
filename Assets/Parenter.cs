@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Parenter : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerStay(Collider other)
     {
-        if(other.GetComponent<BodyCollision>() != null)
+        if(other.GetComponent<BodyCollision>() != null && (FindObjectOfType<Legs>().ground.tag == "climbable" || FindObjectOfType<Legs>().grounded == false))
         {
             FindObjectOfType<BodyController>().transform.parent = this.transform;
-            print("Parenter enter main");
         }
     }
 
@@ -18,7 +18,6 @@ public class Parenter : MonoBehaviour
         if (other.GetComponent<BodyCollision>() != null)
         {
             FindObjectOfType<BodyController>().transform.parent = null;
-            print("Parenter exit main");
 
         }
     }

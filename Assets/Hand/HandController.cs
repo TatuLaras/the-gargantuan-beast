@@ -8,6 +8,7 @@ using Valve.VR;
 public class HandController : MonoBehaviour
 {
     [SerializeField] GameObject player;
+    [SerializeField] AudioClip grabAudio;
 
     [HideInInspector] public bool climbing = false;
     [HideInInspector] public BodyController bodyController;
@@ -17,6 +18,7 @@ public class HandController : MonoBehaviour
     FingerInput fingerInput;
     ObjectInteraction objectInteraction;
     HandAudio audio;
+    SFXManager sfx;
 
     SteamVR_Behaviour_Pose pose;
 
@@ -33,6 +35,7 @@ public class HandController : MonoBehaviour
         fingerInput = GetComponent<FingerInput>();
         objectInteraction = GetComponent<ObjectInteraction>();
         audio = GetComponent<HandAudio>();
+        sfx = FindObjectOfType<SFXManager>();
     }
 
     void FixedUpdate()
@@ -43,7 +46,7 @@ public class HandController : MonoBehaviour
             climbing = true;
 
             haptics.Pulse(PulseTypes.grab, pose.inputSource);
-            audio.GrabSound();
+            sfx.NewSFXAt(this.transform.position, grabAudio, 1);
         }
     }
 

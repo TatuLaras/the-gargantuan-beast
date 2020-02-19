@@ -9,7 +9,8 @@ public class SpreadingFire : MonoBehaviour
 
     private void Update()
     {
-        fireEffect.SetActive(ablaze);
+        if(ablaze != fireEffect.activeInHierarchy)
+            fireEffect.SetActive(ablaze);
     }
 
     private void OnTriggerEnter(Collider other)

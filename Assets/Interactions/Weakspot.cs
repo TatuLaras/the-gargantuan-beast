@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class Weakspot : MonoBehaviour
 {
     [SerializeField] GameObject rootObject;
+    [SerializeField] bool exposed;
+    [SerializeField] ExplodableCage cage;
 
     float bombAttachBoundX = 0.585f;
     float bombAttachBoundZ = 0.273f;
@@ -14,8 +16,25 @@ public class Weakspot : MonoBehaviour
     [HideInInspector] public delegate void Damage();
     [HideInInspector] public Damage damage;
 
+    public SpreadingFire[] conditionsToExpose;
+
+    private void Start()
+    {
+       cage.gameObject.SetActive(!exposed);
+    }
+
+    private void Update()
+    {
+        CheckExpose();
+    }
+
     public bool PlantBomb(InteractableObject item, Vector3 placeToPlant)
     {
+        if(exposed == false)
+        {
+            return false;
+        }
+
         if(item.objectType != ObjectType.bomb || item == null || bombPlanted == true)
         {
             return false;
@@ -42,9 +61,39 @@ public class Weakspot : MonoBehaviour
 
     public void Explode()
     {
+        if(exposed == false)
+            return;
+
         rootObject.SetActive(false);
 
         if(damage != null)
             damage();
+    }
+
+    public void CheckExpose()
+    {
+        if (exposed == true)
+            return;
+
+        bool explode = false;
+
+        foreach(SpreadingFire condition in conditionsToExpose)
+        {
+            if (condition.ablaze == false)
+            {
+                explode = false;
+                break;
+            } else
+            {
+                explode = true;
+            }
+        }
+
+
+        if(explode == true)
+        {
+            cage.Explode();
+            exposed = true;
+        }
     }
 }

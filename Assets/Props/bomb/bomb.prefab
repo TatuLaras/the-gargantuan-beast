@@ -29,8 +29,7 @@ MonoBehaviour:
   explosionRadius: 5
   nearAudioRadius: 6
   farAudioRadius: 30
-  explosionParticlePrefab: {fileID: 8829914062689458282, guid: 115892665afcd18469e0885ebfd272a1,
-    type: 3}
+  explosionClip: {fileID: 8300000, guid: fcbf42f3c8f845f4f85054c9e2eb61f8, type: 3}
   bombStrap: {fileID: 7257193026756055002}
   attached: 0
 --- !u!114 &5256776455436919006
@@ -53,6 +52,8 @@ MonoBehaviour:
   doNotInteract: 0
   fire: {fileID: 5256776456143905011}
   handlebone: {fileID: 0}
+  permanent: 0
+  slot: {fileID: 0}
 --- !u!1 &5256776455354603444
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +169,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427058677731481112, guid: 874579d27ee90cb468093a7f95cf1011,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0011
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427058677731481112, guid: 874579d27ee90cb468093a7f95cf1011,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0028
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427058677731481112, guid: 874579d27ee90cb468093a7f95cf1011,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0095
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 874579d27ee90cb468093a7f95cf1011, type: 3}
@@ -295,7 +311,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 075bc64a647b0b5488f4f99b8e9f4ebd, type: 2}
+      objectReference: {fileID: 2100000, guid: 90d57159e9268054695603ab4e664237, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 413ca5e5341802d4b9c3d704a0b6f804, type: 3}
 --- !u!4 &975423610886671297 stripped

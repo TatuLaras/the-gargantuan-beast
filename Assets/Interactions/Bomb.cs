@@ -16,7 +16,7 @@ public class Bomb : MonoBehaviour
     [SerializeField] float explosionRadius = 5f;
     [SerializeField] float nearAudioRadius = 6f;
     [SerializeField] float farAudioRadius = 15f;
-    [SerializeField] GameObject explosionParticlePrefab;
+    [SerializeField] AudioClip explosionClip;
 
     public GameObject bombStrap;
 
@@ -73,7 +73,9 @@ public class Bomb : MonoBehaviour
             }
         }
 
-        Instantiate(explosionParticlePrefab, this.transform.position, Quaternion.identity);
+        FindObjectOfType<ParticleManager>().SpawnParticleAt(this.transform.position, Particle.explosion, Quaternion.identity);
+        FindObjectOfType<SFXManager>().NewSFXAt(this.transform.position, explosionClip, 1);
+        interactableObject.rootObject.SetActive(false);
         Destroy(interactableObject.rootObject);
     }
 

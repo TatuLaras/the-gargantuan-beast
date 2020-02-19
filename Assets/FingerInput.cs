@@ -50,4 +50,10 @@ public class FingerInput : MonoBehaviour
 
         }
     }
+
+    public void TriggerPress()
+    {
+        objectInteraction.GrabOnTrigger();
+    }
+
 }
